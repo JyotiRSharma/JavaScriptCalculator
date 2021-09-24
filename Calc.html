@@ -46,9 +46,11 @@
 
 		<script type="text/javascript">
 
+			let result = document.getElementById('result');
+
 			function showSymbol(e) //Getting the object of the numbers by the help of parameter e.
 			{
-				let result = document.getElementById('result');
+				// let result = document.getElementById('result');
 				// alert(e.target.id);
 				let obj = e.target;
 				result.textContent += obj.textContent;
@@ -60,6 +62,7 @@
 			// 	result.textContent = 2;
 			// } 
 
+			let num0 = document.getElementById('num0');
 			let num1 = document.getElementById('num1');
 			let num2 = document.getElementById('num2');
 			let num3 = document.getElementById('num3');
@@ -69,7 +72,16 @@
 			let num7 = document.getElementById('num7');
 			let num8 = document.getElementById('num8');
 			let num9 = document.getElementById('num9');
+			let perc = document.getElementById('perc');
+			let divide = document.getElementById('divide');
+			let multi = document.getElementById('multi');
+			let sub = document.getElementById('sub');
+			let plus = document.getElementById('plus');
+			let equal = document.getElementById('equal');
+			let deci = document.getElementById('deci');
+			let clear = document.getElementById('clear');
 
+			num0.addEventListener('click', showSymbol);
 			num1.addEventListener('click', showSymbol);
 			num2.addEventListener('click', showSymbol);
 			num3.addEventListener('click', showSymbol);
@@ -79,7 +91,16 @@
 			num7.addEventListener('click', showSymbol);
 			num8.addEventListener('click', showSymbol);
 			num9.addEventListener('click', showSymbol);
-			
+			perc.addEventListener('click', showSymbol);
+			divide.addEventListener('click', showSymbol);
+			multi.addEventListener('click', showSymbol);
+			sub.addEventListener('click', showSymbol);
+			plus.addEventListener('click', showSymbol);
+			equal.addEventListener('click', showSymbol);
+			deci.addEventListener('click', showSymbol);
+
+			clear.addEventListener('click', e => result.textContent = 0);
+
 		</script>
 
 	</body>
