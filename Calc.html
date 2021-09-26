@@ -53,7 +53,13 @@
 				// let result = document.getElementById('result');
 				// alert(e.target.id);
 				let obj = e.target;
-				result.textContent += obj.textContent;
+				if (result.textContent == 0 || e.target.textContent == 0)
+				{
+					result.textContent = e.target.textContent;
+				}
+				else {
+					result.textContent += e.target.textContent;	
+				}
 			}
 
 			// function showNum2()
@@ -100,7 +106,10 @@
 			deci.addEventListener('click', showSymbol);
 
 			clear.addEventListener('click', e => result.textContent = 0);
-
+			equal.addEventListener('click', 
+				e =>
+					result.textContent = eval(result.textContent)
+				);
 		</script>
 
 	</body>
